@@ -1,0 +1,47 @@
+import java.util.*;
+	class Busstur{
+	public static void main(String[] args){
+		Scanner tastatur = new Scanner(System.in); // vi lager et program som skal ta inn innput for kunder paa en buss. er den over 30 saa skal det stoppe.
+		int totPas=0;
+		int nyPas= 0;								// ingen kunder gaar av paa noen av de 3 bussholdeplassene.
+
+		int pasBuss = nyPas;
+
+		totPas=pasBuss + nyPas;
+
+		nyPas = Integer.parseInt(tastatur.nextLine()); // her legger vi ut en kode slik at brukeren kan skrive antall kunder som kommer paa stasjon1
+
+		if(totPas + nyPas >= 30){
+			System.out.println("Bussen er full");
+		}else{
+			System.out.println("Velkommen paa bussen");
+		}
+		int nyPas2=0;
+		int stasjon2=0;
+
+		nyPas2=Integer.parseInt(tastatur.nextLine()); // her legges det inn kunder paa stasjon2
+
+		stasjon2=totPas+nyPas2;
+
+		if(stasjon2 >= 30){
+			System.out.println("Bussen er full.");
+
+		}else{
+			System.out.println("Velkommen paa bussen");
+		}
+
+		int nyPas3= 0;
+		int stasjon3 =0;
+
+		nyPas3= Integer.parseInt(tastatur.nextLine()); // her legges det inn kunder som kommer paa stasjon3
+
+		stasjon3=totPas+nyPas3;
+
+		if(stasjon3 >= 30){
+			System.out.println("Bussen er full");
+
+		}else{
+			System.out.println("Velkommen paa bussen");
+		}
+	}
+}
