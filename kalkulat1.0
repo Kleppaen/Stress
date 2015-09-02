@@ -1,0 +1,69 @@
+/*
+ *Skal prove aa lage en kalkulator med en meny
+ *@jarandwk [Jarand Waage Kleppa]
+ */
+
+import java.util.Scanner;
+
+	class Enkelkalkulator{
+
+		public static void main(String [] args){
+
+			Scanner scanner =  new Scanner(System.in);
+
+			System.out.println("Skriv inn to tall som du vil regne med");
+
+			double tall1= Double.parseDouble(scanner.nextLine());
+			double tall2= Double.parseDouble(scanner.nextLine());
+
+			//metoder jeg lager for aa regne ut de forskjellige handlingene.
+
+						//her er forsoket mitt paa aa lage en meny.
+			System.out.println("Velg en av folgende alternativer.");
+			System.out.println("1 - Addisjon");
+			System.out.println("2 - Substraksjon");
+			System.out.println("3 - Multiplikasjon");
+			System.out.println("4 - Divisjon");
+			System.out.println("5 - Avslutt");
+			int valg = Integer.parseInt(scanner.nextLine());
+			
+			while(valg != 5){
+				if(valg == 1){
+					addisjon(tall1,tall2);
+					}else if(valg == 2){
+				substraksjon(tall1,tall2);
+				}else if(valg ==  3){
+				multiplikasjon(tall1, tall2);
+			}else if(valg == 4){
+				divisjon(tall1, tall2);
+			}
+			}
+
+
+		}
+		public static void addisjon(double tall1, double tall2){
+
+			double sum=tall1+tall2;
+
+			System.out.println("Summen av tallene dine addert er " + sum);
+		}
+
+		public static void substraksjon(double tall1, double tall2){
+
+			double sum=tall1 -tall2;
+
+			System.out.println("Summen av tallene dine subtrahert er " + sum);
+		}
+		public static void multiplikasjon(double tall1, double tall2){
+
+			double sum=tall1*tall2;
+
+			System.out.println("Summen av tallene dine multiplisert er "+ sum);
+		}
+		public static void divisjon(double tall1, double tall2){
+
+			double sum= tall1/tall2;
+
+			System.out.println("Dette er summen av tallene dine naar du dividere dem :"+ sum);
+		}
+	}
