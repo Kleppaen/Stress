@@ -1,0 +1,26 @@
+import java.util.Scanner;
+import java.io.File;
+
+public class Valg{
+	
+	public static void main(String[] args) throws Exception{
+		String filnavn="stemmer.txt";
+
+		File filenMin = new File(filnavn);
+
+		Scanner filLeser= new Scanner(filenMin);
+
+		String[] stemmerArray = new String[455];
+		int indeks=0;
+
+		String stemmeFraFil=filLeser.nextLine();
+
+		while(filLeser.hasNextLine()){
+			stemmerArray[indeks]=stemmeFraFil;
+
+			indeks++;
+		}
+
+
+	}
+}
